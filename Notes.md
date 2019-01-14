@@ -146,7 +146,9 @@ f is an injection function iff for all y belongs Y, f(x) = y has at most one sol
 
 * If both (on to mapping) and (injection) = f is a bijection function
 
-f is bijection iff for all y belongs Y, f(x) = y has only one solution. (always have one and only one) 
+f is bijection iff for all y belongs Y, f(x) = y has only one solution. (always have one and only one)
+
+if exsists f that maps X -> Y, |X| = |Y|. f produces one-to-one correspondence.
 
 
 ### Function common sets
@@ -167,6 +169,16 @@ f(p, q) = 2^p * (2q + 1)
 
 binary representation of q 010100101.... with 1 at the bottom -> 2q + 1
 binary representation of p 000101011 (00000) with 0s at the bootom -> 2^p
+
+|Q| = |N| = Na since f is bijection. (a for alpha, Na means the number of elements in N)
+
+countable and enummerable.
+
+|(0, 1)| (Real) cannot be bijected with |N|
+
+|X| = |Y|  -> |X| >= |Y|  or  |Y| >= |X|
+
+
 
 
 
