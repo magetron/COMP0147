@@ -236,22 +236,14 @@ Given an injective function f : X -> Y  and an injective function  g : Y -> X. T
 
 ### Important Conclusions
 
-countable, enumberalbe sets : |Q| = |Z| = |N| = Na
+countable, enumberable sets : |Q| = |Z| = |N| = Na
 
 the continious is not countable : |R| > Na
 
+## Permutations Sn. How to coount permutations. |Sn| = n!
 
+sgn(σ) = (-1) ^ k is defined by the number k of "disorders". -> number k of pairs (x, y) that x < y but σ(x) > σ(y)
 
+sgn(σ) = - 1 odd
 
-
-
-
-
-
-
-
-
-
-
-
-
+sgn(σ) = 1 even
