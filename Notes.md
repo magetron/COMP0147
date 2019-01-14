@@ -134,6 +134,10 @@ Y = range(f) = image(f) = { y | exsist x belongs X (y = f(x)) }
 
 * Example : for f(x) = x^2, Range(f) = {r | r >= 0 }
 
+Total function where domain(f) = X
+
+Partial Function where domain(f) <= X
+
 ### Category
 
 * range(f) = Y. -> Surjective / On to mapping.
@@ -176,7 +180,71 @@ countable and enummerable.
 
 |(0, 1)| (Real) cannot be bijected with |N|
 
-|X| = |Y|  -> |X| >= |Y|  or  |Y| >= |X|
+|X| = |Y|  -> |X| >= |Y|  and  |Y| >= |X|
+
+
+### Example
+
+f(x) = x ^ 2 not surjective (cannot produce -1 ...)
+
+f(x) = x ^ 3 surjective
+
+f(n) = 2n not surjective (cannot produce 1, 3 ...)
+
+f(x) = x ^ 2 not injective (+ / -2 produces 4)
+
+f(x) = x ^ 3 injective
+
+f(n) = 2n injective
+
+Both injection and surjection -> bijection
+
+### Composition of Injections
+
+h = f o g is misleading. 
+
+we use h = f ; g
+
+  (f)    (g)
+X ---> Y ---> Z
+
+x1 --> y1 --> z1
+x2 --> y2 --> z2
+
+since f & g are injection, since x1, x2 are different, z1, z2 are differnt
+
+
+## Cardinality. How to compare sets: |X| <= |Y|
+
+if there exsists an injective function f encoding X -> Y
+
+f : X -> Y
+
+### |Q+| <= |N|
+
+We can encode non-negative rationals with the following injection f withc encode any (p / q) with a nautral number 2 ^ p * (2q + 1)
+
+### |X| = |Y|
+
+If we can produce a bijection function (1 to 1 correspondence) h : X -> Y then |X| = |Y|
+
+### Cantor-Bernstein Theorem
+
+(|X| <= |Y|) and (|Y| <= |X|) -> (|X| = |Y|)
+
+Given an injective function f : X -> Y  and an injective function  g : Y -> X. Therefore, one can construct bijection h : X -> Y betwen X and Y.
+
+### Important Conclusions
+
+countable, enumberalbe sets : |Q| = |Z| = |N| = Na
+
+the continious is not countable : |R| > Na
+
+
+
+
+
+
 
 
 
