@@ -247,3 +247,114 @@ sgn(σ) = (-1) ^ k is defined by the number k of "disorders". -> number k of pai
 sgn(σ) = - 1 odd
 
 sgn(σ) = 1 even
+
+### Example
+
+{1, 2 .. n} -> {1, 2 .. n}
+bijection
+
+1 -> σ(1)
+2 -> σ(2)
+...
+Array is a bijection, permutation. 
+
+Foreach position, biject an object / number.
+
+All sorting procedure is based on swap.
+
+bubble sort -> O(n ^ 2) exchange
+
+Qsort -> O(n ^ 2) at most / O(n lg n) most of the time.
+
+Permutation has practical implication in Computer Science.
+
+### Example 2
+
+a1 < a2 < a3
+
+| 1  | 2  | 3  |
+|----|----|----|
+| a3 | a1 | a2 |
+
+--> sorting
+
+| 1  | 2  | 3  |
+|----|----|----|
+| a1 | a2 | a3 |
+
+σ
+1 -> a3
+2 -> a1
+3 -> a2 
+
+σ^2
+a1 -> aa3
+a2 -> aa1
+a3 -> aa2
+
+σ^3
+aa1 -> aaa3
+aa2 -> aaa1
+aa3 -> aaa2
+
+Sorted !
+1 -> aaa1
+2 -> aaa2
+3 -> aaa3
+
+The number of permutation to get a sorted result might be awful.
+
+σ
+1 -> a1
+2 -> a3
+3 -> a2
+
+σ^2
+a1 -> aa1
+a2 -> aa3
+a3 -> aa2
+
+1 -> aa1
+2 -> aa2
+3 -> aa3 
+
+Sorted!
+
+### Definition
+
+σ^k = e where e is the identity permutation
+
+The order of permutation σ is the smallest possible integer k.
+
+All {1, 2, 3} permutation can be sorted in k = 2 / k = 3.
+
+### Sgn
+
+1  2  3
+a3 a1 a2
+
+a3 < a2
+a3 < a1  -> 2 disorders
+
+sgn(σ) = (-1)^2 = 1
+
+1  2  3
+a2 a1 a3
+
+a2 < a1 -> 1 disorder
+
+sgn(σ) = (-1)^1 = 1
+
+sgn respects our composition
+
+For any two permutation σ1 σ2
+
+sgn(σ1σ2) = sgn(σ1) • sgn(σ2)
+
+| σ    | EVEN | ODD  |
+|------|------|------|
+| EVEN | EVEN | ODD  |
+| ODD  | ODD  | EVEN |
+
+
+Ɛ
