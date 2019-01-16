@@ -357,4 +357,33 @@ sgn(σ1σ2) = sgn(σ1) • sgn(σ2)
 | ODD  | ODD  | EVEN |
 
 
-Ɛ
+## Binary Relations
+P(x, y)
+
+"x < y"
+"x <= y"
+"y = x^ (2n)"
+"x is a child of y"
+"x is a pointer to cell that contains y"
+"x and y are students of one and the same school"
+
+### Equivalence Relations E(x, y)
+
+"Reflexivity" (forall x) E(x, x)
+"Symmetry"    (forall x, y) E(x, y) -> E(y, x)
+"Transitivity" (for all x, y, z) E(x, y) and E(y, z) -> E(x, z)
+
+E(x, y) = " x = y "
+E(x, y) = " x^2 = y^2 "
+
+E2(x, y) = " x - y is even"
+E2(x, x) = True
+E2(x, y) -> E2(y, x) True
+Since x - y is even -> x - y = 2n / y - x = -2n is even
+E2(x, y) and E2(y, z) -> E2(x, z)
+x - y = 2k y - z = 2m
+x - z = (x - y) + (y - z) = 2k + 2m = 2(k + m) is even
+
+E2 is also an equivalence relation.
+
+
