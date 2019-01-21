@@ -376,7 +376,7 @@ P(x, y)
 E(x, y) = " x = y "
 E(x, y) = " x^2 = y^2 "
 
-E2(x, y) = " x - y is even"
+E2(x, y) = " x - y is even" modulo 2
 E2(x, x) = True
 E2(x, y) -> E2(y, x) True
 Since x - y is even -> x - y = 2n / y - x = -2n is even
@@ -385,5 +385,69 @@ x - y = 2k y - z = 2m
 x - z = (x - y) + (y - z) = 2k + 2m = 2(k + m) is even
 
 E2 is also an equivalence relation.
+
+[k]2 = {y | E2(k, y) }
+
+[0]2 = {0, 2, -2, 4, -4, ... 2n, -2n} <- even
+
+[1]2 = {1, 3, -1, -3, ... 2n + 1 ...} <- odd
+
+Z / E2 = {EVEN, ODD}
+
+### Congruence - Respects + and x
+
+Equivalence relation E2 divide Z in two partitions.
+
+All partitions can be expressed by Equivalence relations.
+
+[1] + [1] = [2] 
+sum of any two number in [1] gives us all even numbers [2]
+
+[1 + 1] = [2] even
+
+### Example
+
+E3(x, y) = "x - y is divisible by 3"
+
+[0] [1] [2] ([3] = [0])
+
+[a] + [b] = [a + b]
+
+[2] + [2] = [4] = [1]
+
+Em(x, y) = "x = y (mod m)"
+
+> Note by : Properties of + and x
+> Associativity 
+> (a + b) + c = a + (b + c)
+> (a * b) * c = a * (b * c)
+> Communicative a + b = b + a
+> a * b = b * a
+> Specific Number (Neutral Element) 
+> a + 0 = a
+> a * 1 = a
+> Inverse Action / Operation
+> a + x = a - (-x)
+> a * x = a / (1 / x)
+
+### Group
+
+Group (G, o, e, a ^ {-1})
+
+G - set
+o - binary operation
+e - netural element
+a ^ {-1} - inverse operation
+
+### Example
+
+mod 7
+
+2 4 (8 = 1 (mod 7))
+
+x 3 {3, 2, 6, 4, 5, 1} <- finite group <- if I compute multiple times, i will always get 1 (we can simplify big number)
+
+
+
 
 
