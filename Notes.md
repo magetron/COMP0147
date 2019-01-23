@@ -447,7 +447,20 @@ mod 7
 
 x 3 {3, 2, 6, 4, 5, 1} <- finite group <- if I compute multiple times, i will always get 1 (we can simplify big number)
 
+## Equivalence : x = y (mod m)
 
+### Definition 
 
+Em(x, y) = "(x - y) is divisible by m"
+
+k (mod m) = [k]m = {y | (y - k) is divisible by m}
+
+[10]3 = {10, 7, 13, 1 ...} all those numbers that have the same mod 3 as 10.
+		    r <- this is the remainder, which is the most typical representative of the class
+
+### The set of "remainders"
+
+Gm = {0, 1, 2} 
+[0]3 = [3]3
 
 
