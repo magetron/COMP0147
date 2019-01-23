@@ -463,4 +463,192 @@ k (mod m) = [k]m = {y | (y - k) is divisible by m}
 Gm = {0, 1, 2} 
 [0]3 = [3]3
 
+#### Introducing + to Gm
+
+| + (mod 3) | 0 | 1 | 2 |
+|-----------|---|---|---|
+| 0         | 0 | 1 | 2 |
+| 1         | 1 | 2 | 0 |
+| 2         | 2 | 0 | 1 |
+
+[a]3 + [b]3 = [a + b]3
+
+[2]3 + [1]3 = [3]3 = [0]3 <- better representative
+
+[2]3 + [2]3 = [4]3 = [1]3 <- same reason
+
+#### Introducing * to Gm
+
+| * (mod 3) | 0 | 1 | 2 |
+|-----------|---|---|---|
+| 0         | 0 | 0 | 0 |
+| 1         | 0 | 1 | 2 |
+| 2         | 0 | 2 | 1 |
+
+## Group
+
+A nonempty set G together with a binary operation 
+
+`* : G x G -> G`
+
+`(G *)` is a group iff
+
+* a) Closure : forall x, y ((x belongs G) and (y belongs G) -> (x * y belongs G))
+* b) Associativity : for any x, y, z from G. (x * y) * z = x * (y * z)
+* c) Neutral: For some (unique ) ε belongs G -> forall x belongs G (x * ε = ε * x = x)
+* d) Invertibility: forall x belong G (exsist y belong G (x * y = y * x = ε)) Such unique y is denoted as y = x ^ -1
+
+For any group `(G *)` :
+* (a) The neutral element ε is unqiue.
+* (b) The inverse element x ^ -1 is unique
+* (c) For any a, b belongs G, the equation a * x = b has a unique solution: x = a ^ -1 * b
+
+	Proof : 	a * x = b 
+		<=>	a ^ -1  * a * x = a ^ -1 * b
+		<=>	ε * x = a ^ -1 * b
+		<=>	x = a ^ -1 * b
+
+> Informally, x = 1 / a * b = b / a
+
+	Proof :	There is a unique inverse element
+		Let x belongs G, y1, y2, belongs G
+			x * y1 = ε
+			x * y2 = ε
+			y1 * (x * y1) = ε * y1 = y1
+			y1 * (x * y2) = y1 * ε = y1
+			(y1 * x) * y2 = y1
+			ε * y2 = y1
+			y1 = y2
+
+(a) x,y belongs R+ => x * y belongs R+
+(b) x * (y * z) = (x * y) * z
+(c) ε belongs R+ x * 1 = 1 * x = x
+(d) x belongs R+, y belongs R+, x * y = 1
+
+For R, (d) doesn't satisfy. since there is no inverse of 0.
+
+### An Example : Permutation
+
+Sn is all permutation of 
+1 2 3 ... n
+
+(a) σ1σ2 = σ3 Yes.
+(b) σ1(σ2σ3) = (σ1σ2)σ3 Yes.
+(c) ε = (1, 2, 3 ... n) -> (1, 2, 3 ... n) Yes.
+(d) σ = (1, 2, 3) -> (3, 1, 2) <-> σ ^ -1 = (1, 2, 3) -> (2, 3, 1) Yes. Any bijection has an inverse bijection.
+
+Permutation form a group.
+
+#### Example
+
+ε = 
+(1 2 3)
+(1 2 3)
+
+σ1 =
+(1 2 3)
+(2 3 1)
+
+σ2 = σ1 ^ 2
+	(1 2 3)
+-> 	(2 3 1)
+->	(3 1 2)
+
+σ2σ1 =
+	(1 2 3)
+->	(3 1 2)
+->	(1 2 3)
+
+σ2 ^ -1 =
+	(1 2 3)
+->	(2 3 1)
+= σ1
+
+σ2σ1 = σ1 ^ 2 σ1 = ε
+σ1 ^ 3 = ε
+σ2σ2 = σ1 ^ 4 = σ1 
+	(1 2 3)
+->	(3 1 2)
+->	(2 3 1)
+
+(a) a, b belong G -> ab belongs G
+(b) yes.
+(c) yes ε
+(d) σ ^ -1 should belong to G
+
+Multiplication Table:
+| o  | ε  | σ1 | σ2 |
+|----|----|----|----|
+| ε  | ε  | σ1 | σ2 |
+| σ1 | σ1 | σ2 | ε  |
+| σ2 | σ2 | ε  | σ1 |
+
+ε, σ1, σ2  cyclic group.
+
+We have an identical Multiplication Table above with + (mod 3).
+
+#### Example
+
+Sn <- all possible permutations
+
+An = { σ belongs Sn | σ is even)
+
+(a) sgn(σ1σ2) = sgn(σ1)sgn(σ2) is even
+(b) yes
+(c) ε
+(d) sgn(σ σ ^ -1) = ε
+
+**Homework : Make a table for A3**
+
+### Groups : An "additive" Style
+
+`(G, +)`
+
+c) Neutral Element : 0
+d) Inverse denoted as y = -x
+
+a) neutral element 0 is unique
+b) inverse element -x is unique
+c) for any a and b from G, the equation a + x = b has a unqiue solution x = b + (-a) = b - a (informally)
+
+|   | (Z, +)        | (N, +)                |
+|---|---------------|-----------------------|
+| a | Yes           | Yes                   |
+| b | Yes           | Yes                   |
+| c | 0             | 0                     |
+| d | x + y = 0 Yes | No. -x doesn't exsist |
+
+(Z, +) is a group.
+
+
+### Subgropus
+G Sn
+
+An = { σ belongs Sn | σ is even }
+Bn = { σ belongs Sn | σ is odd }
+
+An U Bn = Sn
+
+H is a subset of G.
+
+`(H, *)` H inherent operations from G.
+
+How to check `(H, *)` is a group?
+
+(a) x, y belongs H -> x * y belongs H *(SHOULD be checked)*
+(b) no need to check (provided by G)
+(c) check that ε belongs H. *(SHOULD be checked)*
+(d) inverse forall x belongs H (exsist y belongs H (x * y = y * x = ε)) *(SHOULD be checked)*
+
+go back to An above.
+
+An is a subset and a subgroup.
+(a) yes
+(b) yes
+(c) yes
+(d) yes sgn(σ^-1 σ) = 0sgn(ε) = +1
+	sgn(σ^-1)sgn(σ) = +1
+
+Bn is a subset not a group.
+(c) ε doesnot carry on.
 
