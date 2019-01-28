@@ -74,6 +74,49 @@ x belongs A, y belongs B U C
    (x, y) belongs D
 
 
+# Problem Solving Class - 3
 
+> Reminder for Group
+> 1. Closiness (Closure) Stays in the group after operation
+> 2. Associativity (a * b) * c = a * (b * c)
+> 3. Neutral element
+> 4. Inverse element for every element in the group
 
+## 1.
 
+### a)
+
+Inverse element not found for 2 ... (e.g 2 * (1 / 2) = 1)
+
+1 / 2 is not in the group
+
+### b)
+
+Neutral element requires to be communitive.
+
+Therefore, x - 0 = x
+However, 0 - x != x. 
+Thus, there is no neutral element.
+
+Associativity not satisfied for all elements
+
+(x - y) - z != x - (y - z)
+
+### c)
+
+ε = -1
+
+x . y = -1
+
+x + y + 1 = -1 
+
+y = - x - 2
+
+## 3.
+
+### c)
+x^3 in Q, y^3 in Q
+
+(x * y)^3 = x^3 * y^3 in Q
+
+C is a group, it is a subgroup of G(R, *)
