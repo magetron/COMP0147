@@ -652,3 +652,69 @@ An is a subset and a subgroup.
 Bn is a subset not a group.
 (c) ε doesnot carry on.
 
+If H is a subgroup of G (which is finite)
+
+|H| divides |G|.
+
+#### Example
+
+G = ({1, 2, 3, 4}, (* | mod 5)}
+
+| G | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| 1 | 1 | 2 | 3 | 4 |
+| 2 | 2 | 4 | 1 | 3 |
+| 3 | 3 | 1 | 4 | 2 |
+| 4 | 4 | 3 | 2 | 1 |
+
+ε = 1
+
+2y = 1  -> y = 3
+
+2^(-1) = 3
+
+3y = 1  -> y = 2
+
+3^(-1) = 2
+
+4y = 1  -> y = 4
+
+4^(-1) = 4
+
+The particular subgroup we are looking for is called cyclic subgroup.
+
+
+#### Cyclic Group
+
+a^-2, a^-1, 1, a a^2 ..
+
+In our example, 1, 2, 4, 3(2^3), 1(2^4), 4(2^5) ...
+
+Group c (cyclic group) i identical to the Group G.
+
+Also, anthoer example start with 3.
+
+3, 4, 2, 1, ...
+
+There is no actual subgroup for this case.
+
+#### Example
+
+H = ({1, 5} * mod 6)
+
+(2 - 1) * (3 - 1)
+
+| H | 1 | 5 |
+|---|---|---|
+| 1 | 1 | 5 |
+| 5 | 5 | 1 |
+
+#### Example 
+
+H = ({1, 2, 4, 8} * mod 15)
+
+15 = 3 * 5
+
+{1, 2, 4, 7, 8, 10, 11, 13, 14}
+
+|G| = 8
